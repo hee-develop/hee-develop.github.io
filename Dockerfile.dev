@@ -1,0 +1,10 @@
+FROM node:17.5.0-alpine3.15
+
+WORKDIR /app
+
+RUN apk update &&\
+    apk add git
+RUN git config --global user.name "hee-develop" &&\
+    git config --global user.email "hee950320@yahoo.co.jp"
+
+CMD [ "/bin/sh" ]
